@@ -27,6 +27,8 @@ jobs:
       UPSTREAM_BRANCH: master
       HACS_NAME: Plejd 2.0
       GH_TOKEN: ${{ github.token }}
+      # Keep gh on this fork; it otherwise picks the "upstream" remote.
+      GH_REPO: ${{ github.repository }}
     steps:
       - uses: actions/checkout@v4
         with:
